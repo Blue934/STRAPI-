@@ -520,11 +520,7 @@ async function editMessage(messageId, currentText, mediaId) {
                 <span className="username">{msg.user?.username || "Utilisateur inconnu"}:</span>
                 <span className="text-content">
                   
-                  {/* Vérification et affichage des médias */}
-                  {msg.media && msg.media.url && (
-                    <>
-                      <p>📥 Média trouvé : {msg.media.name}</p>
-                      <p>🔗 URL Média : {STRAPI_URL + msg.media.url}</p>
+                 
 
                       {msg.media.mime?.startsWith("video") ? (
                         <video key={msg.media.id} controls className="chat2-media">
